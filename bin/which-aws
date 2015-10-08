@@ -1,0 +1,20 @@
+#!/bin/bash
+
+#!/bin/bash
+
+set -euo pipefail
+
+echo "AWS_DEFAULT_PROFILE=${AWS_DEFAULT_PROFILE:-}"
+
+case "${AWS_ACCESS_KEY_ID:-}" in
+	AKIAIBLAHBLAHBLAHBLA)
+		echo AWS_ACCESS_KEY_ID: janrain-prod
+		;;
+	'')
+		echo AWS_ACCESS_KEY_ID not set
+		;;
+	*)
+		echo Unknown AWS_ACCESS_KEY_ID "\"$AWS_ACCESS_KEY_ID\""
+		;;
+esac
+
